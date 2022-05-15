@@ -1,7 +1,7 @@
 <script setup>
 	import {ref, onBeforeMount} from 'vue';
   
-	import Users from './AsyncUserComp.vue';
+	import Users from './async-user-comp.vue';
   
 </script>
 

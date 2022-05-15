@@ -1,6 +1,4 @@
 <script setup>
-	import {ref} from 'vue';
-  
   const getUsers = async n => {
     const res = await fetch(`https://randomuser.me/api/?results=${n}`);
     return await res.json();
@@ -12,7 +10,7 @@
 
 <template>
   <div id="container">
-    <div class="card" v-for="({cell, gender, email, picture, name}, i) in users">
+    <div class="card" v-for="({cell, gender, email, picture, name, id}, i) in users" :key="id.value">
       <div class='line1'>
         <img class="img" :src="picture.medium" alt="#N/A">
       	<h1>{{`${name.first} ${name.last} (${i})`}}</h1>
